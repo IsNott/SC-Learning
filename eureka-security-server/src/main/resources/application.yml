@@ -1,0 +1,15 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: eureka-security
+  security: #配置SpringSecurity登录用户名和密码
+    user:
+      name: nott
+      password: 00000
+eureka:
+  instance:
+    hostname: localhost  #指定主机地址
+  client:
+    register-with-eureka: false #指定是否要注册到注册中心（注册中心不需要开启）
+    fetch-registry: false  #指定是否要从注册中心获取服务（注册中心不需要开启）
