@@ -1,0 +1,12 @@
+server:
+  port: 8103
+spring:
+  application:
+    name: eureka-client-02
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: false
+    service-url:
+      # 注册到有登录认证的注册中心需要修改注册中心地址格式http://${username}:${password}@${hostname}:${port}/eureka/
+      defaultZone: http://nott:000000@localhost:8004/eureka/

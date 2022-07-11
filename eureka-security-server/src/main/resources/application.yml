@@ -6,7 +6,7 @@ spring:
   security: #配置SpringSecurity登录用户名和密码
     user:
       name: nott
-      password: 00000
+      password: 000000
 eureka:
   instance:
     hostname: localhost  #指定主机地址
