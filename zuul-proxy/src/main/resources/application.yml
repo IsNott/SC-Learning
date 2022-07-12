@@ -1,0 +1,43 @@
+server:
+  port: 8801
+spring:
+  application:
+    name: zuul-service
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+zuul:
+  routes:
+    user-service: #给特定服务配置路由,可以不设置使用Eureka的默认路径（注册中心的服务名称）
+      path: /userService/**
+    feign-service:
+      path: /feignService/**
+  ZuulFilter: # 禁用过滤器实例,filterClassName
+    pre: # filter
+      disable: true
+  servlet-path: / #因为zuul的默认前缀也是zuul所以要先清空context-path
+  prefix: /zuul #请求前缀
+  #Zuul在请求路由时，默认会过滤掉一些敏感的头信息，以下配置可以防止路由时的Cookie及Authorization的丢失
+  sensitive-headers: Cookie,Set-Cookie,Authorization #配置过滤敏感的请求头信息，设置为空就不会过滤
+  add-host-header: true #设置为true重定向是会添加host请求头
+#  ignored-services: user-service 关闭默认配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["routes"] # 开启查看路由的端点
+
+#由于Zuul自动集成了Ribbon和Hystrix，所以Zuul天生就有负载均衡和服务容错能力，我们可以通过Ribbon和Hystrix的配置来配置Zuul中的相应功能。
+hystrix:
+  command: #用于控制HystrixCommand的行为
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000 #配置HystrixCommand执行的超时时间，执行超过该时间会进行服务降级处理
+ribbon: #全局配置
+  ConnectTimeout: 1000 #服务请求连接超时时间（毫秒）
+  ReadTimeout: 3000 #服务请求处理超时时间（毫秒）
