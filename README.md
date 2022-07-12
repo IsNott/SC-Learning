@@ -1,7 +1,11 @@
 # SC-Learning
 
+## 教程来自： https://github.com/macrozheng/springcloud-learning
+
 ### 介绍
 Spring-Cloud学习源码..
+代码仅供个人学习用途，仅为个人重复造轮子行为...
+
 ### 版本
 ##### Version: 1.0
 ##### spring-boot: 2.1.7.RELEASE
@@ -9,5 +13,6 @@ Spring-Cloud学习源码..
 ### 进度：
 ##### Eureka服务注册与发现     -- enreka-xx
 ##### Ribbon负载均衡和服务调用     -- user-service/ribbon-xx
+##### Hystrix服务降级和流量监控      -- hystrix-xx/turbine-xx 
 
-2022/07/11 未完待续...
+未完待续...

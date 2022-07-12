@@ -3,7 +3,7 @@ package com.nott.cloud.userservice.entity;
 import lombok.Data;
 
 /**
- * @author zouwenlong
+ * @author Nott
  * @Date 2022/7/11 17:04
  */
 

@@ -3,7 +3,7 @@ package com.nott.cloud.hystrixservice;
 import lombok.Data;
 
 /**
- * @author zouwenlong
+ * @author Nott
  * @Date 2022/7/11 20:17
  */
 
