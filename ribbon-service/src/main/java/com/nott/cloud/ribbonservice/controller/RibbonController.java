@@ -29,19 +29,19 @@ public class RibbonController {
     @RequestMapping("/{id}")
     public Result getUser(@PathVariable Long id) {
         log.info("get obj from" + userServiceUrl);
-        return Result.data(restTemplate.getForObject(userServiceUrl+"/userGet/{id}", User.class, id));
+        return Result.data(restTemplate.getForObject(userServiceUrl+"/userGet/{id}", Result.class, id));
     }
 
     @RequestMapping("/create")
     public Result addUser() {
         log.info("create obj from" + userServiceUrl);
-        return Result.data(restTemplate.getForObject(userServiceUrl+"/userCreate", User.class));
+        return Result.data(restTemplate.getForObject(userServiceUrl+"/userCreate", Result.class));
     }
 
     @RequestMapping("/del/{id}")
     public Result delUser(@PathVariable Long id) {
         log.info("del obj from" + userServiceUrl);
-        return Result.data(restTemplate.getForObject(userServiceUrl+"/userRev", User.class, id));
+        return Result.data(restTemplate.getForObject(userServiceUrl+"/userRev", Result.class, id));
     }
 
     @RequestMapping("/update")

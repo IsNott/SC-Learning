@@ -1,0 +1,15 @@
+server:
+  port: 8601
+spring:
+  application:
+    name: turbine-service
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+turbine:
+  app-config: hystrix-service # 指定需要收集的服务
+  cluster-name-expression: new String('default') #指定服务所属集群
+  combine-host-port: true # 指定主机和端口区分服务

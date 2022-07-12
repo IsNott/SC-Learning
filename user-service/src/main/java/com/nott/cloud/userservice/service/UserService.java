@@ -1,5 +1,6 @@
 package com.nott.cloud.userservice.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.nott.cloud.userservice.entity.User;
@@ -16,7 +17,7 @@ import javax.annotation.Resource;
 
 @Service
 @Slf4j
-public class UserService extends ServiceImpl<UserMapper,User> {
+public class UserService extends ServiceImpl<UserMapper, User> {
 
     @Resource
     private UserMapper userMapper;
@@ -48,9 +49,8 @@ public class UserService extends ServiceImpl<UserMapper,User> {
     }
 
     public User getByname(String name) {
-        User user = new User();
-        user.setUsername(name);
-        QueryWrapper<User> wrapper = new QueryWrapper<>(user, "username");
+        LambdaQueryWrapper<User> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(User::getUsername, name);
         return userMapper.selectList(wrapper).get(0);
     }
 }

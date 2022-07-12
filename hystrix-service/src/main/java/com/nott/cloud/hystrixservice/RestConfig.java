@@ -1,4 +1,4 @@
-package com.nott.cloud.ribbonservice.config;
+package com.nott.cloud.hystrixservice;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -7,17 +7,13 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author zouwenlong
- * @Date 2022/7/11 18:36
+ * @Date 2022/7/11 20:22
  */
 
 @Configuration
-public class RibbonConfig {
-    /**
-     * RestTemplate是一个HTTP客户端，使用它我们可以方便的调用HTTP接口，支持GET、POST、PUT、DELETE等方法
-     * @return
-     */
+public class RestConfig {
     @Bean
-    @LoadBalanced //使用@LoadBalanced注解赋予RestTemplate负载均衡的能力
+    @LoadBalanced //开启负载均衡
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
