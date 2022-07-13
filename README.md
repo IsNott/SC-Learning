@@ -18,5 +18,7 @@ Spring-Cloud学习源码..
 ##### feign服务调用             -- feign-service
 ##### zuul网关服务              -- zuul-proxy
 ##### config配置中心            -- config-xx
+##### sleuth链路跟踪            -- 整合到ribbon/user模块
+##### gateway新一代网关服务        -- api-gateway
+##### Bus消息总线               -- 未整合
 
-未完待续...

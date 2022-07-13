@@ -1,0 +1,22 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: api-gateway
+    # 配置文件使用gateway
+  cloud:
+    gateway:
+      routes:
+        - id: path_route #路由id
+          #          uri: ${service-url.user-service}/get/{id} # 匹配后路由地址
+          uri: lb://user-service
+          predicates: # 断言，匹配后转发
+            - Path=/user/**
+          filters:
+            - StripPrefix=1
+      discovery: # 作为网关服务
+        locator:
+          lower-case-service-id: true # 使用小写服务名称
+          enabled: true # 从注册中心开启动态创建路由
+service-url:
+  user-service: http://localhost:8201

@@ -12,6 +12,7 @@
         <module name="config-security-server" />
         <module name="hystrix-service" />
         <module name="zuul-proxy" />
+        <module name="api-gateway" />
         <module name="eureka-client" />
         <module name="hystrix-dashboard" />
         <module name="user-service" />
@@ -19,6 +20,7 @@
         <module name="feign-service" />
         <module name="ribbon-service" />
         <module name="eureka-server" />
+        <module name="consul-config-client" />
         <module name="SC-Learning" />
         <module name="eureka-security-server" />
       </profile>
@@ -27,9 +29,11 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SC-Learning" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
       <module name="config-client" options="-parameters" />
       <module name="config-security-server" options="-parameters" />
       <module name="config-server" options="-parameters" />
+      <module name="consul-config-client" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-security-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />

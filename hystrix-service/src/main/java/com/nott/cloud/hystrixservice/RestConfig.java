@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author Nott
- * @Date 2022/7/11 20:22
+ * @Date 2022/7/11
  */
 
 @Configuration

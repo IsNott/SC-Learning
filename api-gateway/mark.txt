@@ -1,0 +1,44 @@
+Route Predicate 断言
+Spring Cloud Gateway将路由匹配作为Spring WebFlux HandlerMapping基础架构的一部分。
+Spring Cloud Gateway包括许多内置的Route Predicate工厂。
+所有这些Predicate都与HTTP请求的不同属性匹配。 多个Route Predicate工厂可以进行组合。
+
+注意：Predicate中提到的配置都在application-predicate.yml文件中进行修改，并用该配置启动api-gateway服务。
+
+#After Route Predicate
+在指定时间之后的请求会匹配该路由。
+#Before Route Predicate
+在指定时间之前的请求会匹配该路由。
+#Between Route Predicate
+在指定时间区间内的请求会匹配该路由。
+#Cookie Route Predicate
+带有指定Cookie的请求会匹配该路由。
+#Header Route Predicate
+带有指定请求头的请求会匹配该路由。
+#Host Route Predicate
+带有指定Host的请求会匹配该路由。
+#Method Route Predicate
+发送指定方法的请求会匹配该路由。
+#Path Route Predicate
+发送指定路径的请求会匹配该路由。
+#Query Route Predicate
+带指定查询参数的请求可以匹配该路由。
+#RemoteAddr Route Predicate
+从指定远程地址发起的请求可以匹配该路由。
+#Weight Route Predicate
+使用权重来路由相应请求
+
+Route Filter 过滤器
+路由过滤器可用于修改进入的HTTP请求和返回的HTTP响应，路由过滤器只能指定路由进行使用。
+Spring Cloud Gateway 内置了多种路由过滤器，他们都由GatewayFilter的工厂类来产生
+
+#AddRequestParameter GatewayFilter
+给请求添加参数的过滤器。
+#StripPrefix GatewayFilter
+对指定数量的路径前缀进行去除的过滤器
+#PrefixPath GatewayFilter
+与StripPrefix过滤器恰好相反，会对原有路径进行增加操作的过滤器。
+#Hystrix GatewayFilter
+Hystrix 过滤器允许你将断路器功能添加到网关路由中，使你的服务免受级联故障的影响，并提供服务降级处理。
+#RequestRateLimiter GatewayFilter
+RequestRateLimiter 过滤器可以用于限流，使用RateLimiter实现来确定是否允许当前请求继续进行，如果请求太大默认会返回HTTP 429-太多请求状态。

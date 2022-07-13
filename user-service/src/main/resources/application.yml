@@ -8,10 +8,21 @@ spring:
     url: jdbc:mysql://localhost:3306/sc-learning?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     username: root
     password: 888888
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8001/eureka
+  zipkin:
+    base-url: http://localhost:9411 # zipkin-service访问地址
+    sleuth:
+      sampler:
+        probability: 0.1 # 设置sleuth的抽样收集概率
+  cloud:
+    consul: # consul服务注册发现配置
+      port: 8500
+      host: localhost
+      discovery:
+        service-name: ${spring.application.name}
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://localhost:8001/eureka
 

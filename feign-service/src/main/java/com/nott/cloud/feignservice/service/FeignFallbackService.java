@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * @author Nott
- * @Date 2022/7/12 19:04
+ * @Date 2022/7/12
  */
 
 @Component //实现FeignService对每个方法实现服务降级
