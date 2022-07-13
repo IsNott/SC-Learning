@@ -7,16 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="config-client" />
+        <module name="config-security-server" />
         <module name="hystrix-service" />
-        <module name="feign-service" />
-        <module name="SC-Learning" />
-        <module name="eureka-client" />
         <module name="zuul-proxy" />
-        <module name="ribbon-service" />
-        <module name="eureka-server" />
+        <module name="eureka-client" />
         <module name="hystrix-dashboard" />
         <module name="user-service" />
         <module name="turbine-service" />
+        <module name="feign-service" />
+        <module name="ribbon-service" />
+        <module name="eureka-server" />
+        <module name="SC-Learning" />
         <module name="eureka-security-server" />
       </profile>
     </annotationProcessing>
@@ -24,6 +27,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SC-Learning" options="-parameters" />
+      <module name="config-client" options="-parameters" />
+      <module name="config-security-server" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-security-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />

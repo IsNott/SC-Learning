@@ -1,0 +1,26 @@
+server:
+  port: 8111
+spring:
+  application:
+    name: config-security-server
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          uri: https://gitee.com/zzzwlong/sc-config.git
+          username: username
+          password: password
+#          basedir: /
+#       native:
+#         search-locations: classpath:/config # 读取git仓库失败，改为读取本地classpath目录下文件，访问http://localhost:8901/config-server/dev
+  security:
+    user:
+      password: 888888 # 设置验证中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+

@@ -1,0 +1,29 @@
+server:
+  port: 8901
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          # 获取配置信息
+          # /{label}/{application}-{profile}
+          # 获取配置文件信息
+          # /{label}/{application}-{profile}.yml
+          # 查看配置文件信息http://localhost:8901/master/config-dev.yml
+          # 查看配置文件 http://localhost:8901/master/config-dev
+
+          clone-on-start: true
+          uri: https://gitee.com/zzzwlong/sc-config.git
+          username: username
+          password: password
+#          basedir: /
+#       native:
+#         search-locations: classpath:/config # 读取git仓库失败，改为读取本地classpath目录下文件，访问http://localhost:8901/config-server/dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+    fetch-registry: true
+    register-with-eureka: true

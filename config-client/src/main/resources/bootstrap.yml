@@ -1,0 +1,24 @@
+server:
+  port: 8101
+spring:
+  application:
+    name: config-client
+  cloud:
+    config: # 配置config客户端
+      profile: dev # 启用配置文件后缀
+      label: master # 分支
+      uri: http://localhost:8111 # 配置中心地址
+      name: config # 配置文件名称
+      username: user # 整合验证中心
+      password: 888888
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh' # 开启refresh端点,访问actuator/refresh刷新配置

@@ -10,9 +10,13 @@ Spring-Cloud学习源码..
 ##### Version: 1.0
 ##### spring-boot: 2.1.7.RELEASE
 ##### spring-cloud: Greenwich.SR2
+
 ### 进度：
 ##### Eureka服务注册与发现     -- enreka-xx
 ##### Ribbon负载均衡和服务调用     -- user-service/ribbon-xx
 ##### Hystrix服务降级和流量监控      -- hystrix-xx/turbine-xx 
+##### feign服务调用             -- feign-service
+##### zuul网关服务              -- zuul-proxy
+##### config配置中心            -- config-xx
 
 未完待续...
