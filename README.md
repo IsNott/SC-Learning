@@ -3,8 +3,8 @@
 ## 教程来自： https://github.com/macrozheng/springcloud-learning
 
 ### 介绍
-Spring-Cloud学习源码..
-代码仅供个人学习用途，仅为个人重复造轮子行为...
+Spring-Cloud学习源码记录..
+仅供个人学习用途，仅为个人重复造轮子行为...
 
 ### 版本
 ##### Version: 1.0
