@@ -21,6 +21,8 @@
         <option value="$PROJECT_DIR$/consul-config-client/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/oauth2-server/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth2-jwt-server/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth2-client/pom.xml" />
       </list>
     </option>
   </component>
