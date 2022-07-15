@@ -12,8 +12,8 @@
         <module name="config-security-server" />
         <module name="hystrix-service" />
         <module name="zuul-proxy" />
-        <module name="api-gateway" />
         <module name="eureka-client" />
+        <module name="SC-Learning" />
         <module name="hystrix-dashboard" />
         <module name="turbine-service" />
         <module name="feign-service" />
@@ -21,8 +21,9 @@
         <module name="eureka-server" />
         <module name="consul-config-client" />
         <module name="user-service" />
-        <module name="SC-Learning" />
+        <module name="api-gateway" />
         <module name="eureka-security-server" />
+        <module name="oauth2-server" />
       </profile>
     </annotationProcessing>
   </component>
@@ -40,6 +41,7 @@
       <module name="feign-service" options="-parameters" />
       <module name="hystrix-dashboard" options="-parameters" />
       <module name="hystrix-service" options="-parameters" />
+      <module name="oauth2-server" options="-parameters" />
       <module name="ribbon-service" options="-parameters" />
       <module name="turbine-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
